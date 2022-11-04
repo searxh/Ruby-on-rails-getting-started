@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   root "articles#index"
 
   #declares that GET / articles requests are mapped to the index action of ArticlesController
-  get "/articles", to: "articles#index"
-
-  get "/articles/:id", to:"articles#show"
+  resources :articles
 
   # Defines the root path route ("/")
   # root "articles#index"
